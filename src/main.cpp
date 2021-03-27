@@ -6,9 +6,6 @@
 #include <stdlib.h> 
 #include <iomanip>
 
-template<typename T>
-std::string int_to_hex(T i);
-
 long encode(char character, std::time_t cts = std::time(nullptr), int salt = 0) {
 	if (salt != 0) return (character + cts)*salt;
 	else return (int)character+cts;
